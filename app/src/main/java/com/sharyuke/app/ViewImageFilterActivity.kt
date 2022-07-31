@@ -47,6 +47,4 @@ class ViewImageFilterActivity : AppCompatActivity() {
     }
 }
 
-private fun <T> ViewStub.inflateAndFindView(layout: Int, id: Int): T = apply { layoutResource = layout }.inflate().findViewById(id)
-
 data class ImageFilterModel(val name: String, val layout: Int, val id: Int, val to: Float, val default: Float, val onChange: (ImageFilterView, Float) -> Unit)
