@@ -13,8 +13,8 @@ class ViewListActivity : AppCompatActivity() {
         title = "列表"
         val list = listOf(
             ListItem(R.mipmap.icon_list, "简单列表") { Toast.makeText(this, "就是这个页面拉~", Toast.LENGTH_LONG).show() },
-            ListItem(R.mipmap.icon_list_group, "分组列表") { android.widget.Toast.makeText(this, "还没做", Toast.LENGTH_LONG).show() },
-            ListItem(R.mipmap.icon_list_page, "分页列表") { android.widget.Toast.makeText(this, "还没做", Toast.LENGTH_LONG).show() },
+            ListItem(R.mipmap.icon_list_group, "分组列表") { Toast.makeText(this, "还没做", Toast.LENGTH_LONG).show() },
+            ListItem(R.mipmap.icon_list_page, "分页列表") { Toast.makeText(this, "还没做", Toast.LENGTH_LONG).show() },
         )
         findViewById<RecyclerView>(R.id.view_list_rv).adapter = adapterCreate(R.layout.item_simple_txt, list) {
             onHasItem {

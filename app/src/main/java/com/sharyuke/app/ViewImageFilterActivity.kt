@@ -31,7 +31,7 @@ class ViewImageFilterActivity : AppCompatActivity() {
             ImageFilterModel("缩放", R.layout.item_image_5, R.id.item_image_5, 3f, 1f) { i, f -> i.imageZoom = f },
             ImageFilterModel("旋转", R.layout.item_image_6, R.id.item_image_6, 360f, 0f) { i, f -> i.imageRotate = f },
         )
-        findViewById<RecyclerView>(R.id.view_image_filter_rv).adapter = adapterCreate(R.layout.item_pic, list) {
+        findViewById<RecyclerView>(R.id.view_image_filter_rv).adapter = adapterCreate(R.layout.item_view_image_filter, list) {
             onHasItem {
                 val imageView = getView<ViewStub>(R.id.item_view_sub).inflateAndFindView<ImageFilterView>(layout, id)
                 imageView.loadUrl(DEMO_IMAGE_URL)

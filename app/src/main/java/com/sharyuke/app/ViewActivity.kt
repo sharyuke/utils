@@ -10,7 +10,7 @@ class ViewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view)
-        title = intent.getStringExtra(TITLE)
+        title = "视图"
         val list = listOf(
             ViewItem(R.mipmap.icon_list, "列表"),
             ViewItem(R.mipmap.icon_pic, "图片"),
