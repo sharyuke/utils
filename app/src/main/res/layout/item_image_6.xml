@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.utils.widget.ImageFilterView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/item_image_0"
+    android:id="@+id/item_image_6"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" />
+    android:layout_height="match_parent" /><!--    app:imageRotate="0"  同样这里直接设置也崩溃-->
