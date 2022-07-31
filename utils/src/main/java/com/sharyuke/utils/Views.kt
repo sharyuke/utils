@@ -4,6 +4,7 @@ import android.os.Handler
 import android.os.Looper
 import android.view.View
 import android.widget.ImageView
+import com.bumptech.glide.Glide
 
 var lastClickTime = 0L//防止两次点击过快
 
@@ -23,7 +24,5 @@ fun <T : View> T.onClick(back: T.() -> Unit): T {
 }
 
 fun ImageView.loadUrl(url: String?) {
-    url?.let {
-        // TODO Use your Image load Framework
-    }
+    url?.let { Glide.with(context).load(it).into(this) }
 }

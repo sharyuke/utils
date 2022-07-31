@@ -23,6 +23,7 @@ class ViewActivity : AppCompatActivity() {
             onItemClick {
                 when (position) {
                     0 -> startActivity(Intent(this@ViewActivity, ViewListActivity::class.java))
+                    1 -> startActivity(Intent(this@ViewActivity, ViewImageActivity::class.java))
                 }
             }
         }
