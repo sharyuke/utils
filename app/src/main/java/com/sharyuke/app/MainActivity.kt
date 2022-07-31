@@ -15,8 +15,8 @@ class MainActivity : AppCompatActivity() {
         val list = listOf(
             HomeItem(R.mipmap.home_view, "视图"),
             HomeItem(R.mipmap.home_file, "文件"),
-            HomeItem(R.mipmap.home_view, "网络"),
-            HomeItem(R.mipmap.home_view, "蓝牙"),
+            HomeItem(R.mipmap.home_net, "网络"),
+            HomeItem(R.mipmap.home_device, "硬件"),
             HomeItem(R.mipmap.home_view, "视图"),
         )
         findViewById<RecyclerView>(R.id.home_recycler_view).adapter = adapterCreate(R.layout.item_home, list) {

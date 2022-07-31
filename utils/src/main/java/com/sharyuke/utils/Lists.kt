@@ -13,7 +13,7 @@ class EasyHolder<T>(view: View) : BaseViewHolder(view) {
     var item: T? = null
     var adapter: BaseQuickAdapter<T, EasyHolder<T>>? = null
 
-    fun setImage(id: Int, url: String?) = getView<ImageView>(id).loadUrl(url)
+    fun setImageUrl(id: Int, url: String?) = getView<ImageView>(id).loadUrl(url)
 
     fun onHasItem(block: T.() -> Unit) = item?.apply(block)
     fun onItemClick(itemClick: ItemModel<T>.() -> Unit) = itemView.onClick { item?.apply { itemClick(ItemModel(adapterPosition, this, adapter!!)) } }
