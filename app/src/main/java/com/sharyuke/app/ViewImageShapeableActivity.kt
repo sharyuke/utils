@@ -14,7 +14,9 @@ import com.sharyuke.utils.adapterCreate
 import com.sharyuke.utils.loadUrl
 
 /**
- * 相比ImageFilterView 这个ImageView，功能更多，但是也更复杂，大多数情况用ImageFilterView即可，如果对不同的角，有不同的切片形状，可以用此View实现。
+ * 功能：实现对图片四个角的圆角 切角，可以单独控制，但是不能进行图片的滤镜功能。
+ *
+ * 相比ImageFilterView 这个ImageView，切角原价功能更多，但是也更复杂，大多数情况用ImageFilterView即可，如果对不同的角，有不同的切片形状，可以用此View实现。
  */
 class ViewImageShapeableActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

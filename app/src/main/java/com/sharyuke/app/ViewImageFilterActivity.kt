@@ -15,6 +15,7 @@ const val DEMO_IMAGE_URL = "https://pic.qqtn.com/up/2017-11/15102069107000700.jp
 /**
  * 前面这4个属性 1.3.0 的 implementation("androidx.appcompat:appcompat:1.3.0") 包含
  * 后面的属性 需要1.4.1 才有
+ * 功能：可以对图片进行简单的圆角，对比度、亮度、饱和度、缩放、旋转等操作。
  */
 class ViewImageFilterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
