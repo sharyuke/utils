@@ -1,5 +1,6 @@
 package com.sharyuke.app
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -12,7 +13,7 @@ class ViewListActivity : AppCompatActivity() {
         setContentView(R.layout.activity_view_list)
         title = "列表"
         val list = listOf(
-            ListItem(R.mipmap.icon_list, "简单列表") { Toast.makeText(this, "就是这个页面拉~", Toast.LENGTH_LONG).show() },
+            ListItem(R.mipmap.icon_list, "简单列表") { startActivity(Intent(this, ViewListBaseActivity::class.java)) },
             ListItem(R.mipmap.icon_list_group, "分组列表") { Toast.makeText(this, "还没做", Toast.LENGTH_LONG).show() },
             ListItem(R.mipmap.icon_list_page, "分页列表") { Toast.makeText(this, "还没做", Toast.LENGTH_LONG).show() },
         )

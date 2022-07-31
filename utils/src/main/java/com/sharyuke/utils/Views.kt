@@ -23,6 +23,20 @@ fun <T : View> T.onClick(back: T.() -> Unit): T {
     return this
 }
 
+fun <T : View> T.onLongClick(back: T.() -> Unit): T {
+    setOnLongClickListener {
+        val time = System.currentTimeMillis()
+//        if (time - lastClickTime > 500) { // 多种方式防止双重点击
+        back(this)// 长按大概率不会重复点击，所以去掉重复点击逻辑
+//            uiHandler.postDelayed({ isClickable = true }, 500)
+//            isClickable = false
+//            lastClickTime = time
+//        }
+        false
+    }
+    return this
+}
+
 fun ImageView.loadUrl(url: String?) {
     url?.let { Glide.with(context).load(it).into(this) }
 }

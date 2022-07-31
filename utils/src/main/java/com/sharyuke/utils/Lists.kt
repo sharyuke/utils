@@ -17,6 +17,7 @@ class EasyHolder<T>(view: View) : BaseViewHolder(view) {
 
     fun onHasItem(block: T.() -> Unit) = item?.apply(block)
     fun onItemClick(itemClick: ItemModel<T>.() -> Unit) = itemView.onClick { item?.apply { itemClick(ItemModel(adapterPosition, this, adapter!!)) } }
+    fun onItemLongClick(itemClick: ItemModel<T>.() -> Unit) = itemView.onLongClick { item?.apply { itemClick(ItemModel(adapterPosition, this, adapter!!)) } }
 }
 
 data class ItemModel<T>(val position: Int, val item: T, val adapter: BaseQuickAdapter<T, EasyHolder<T>>)
