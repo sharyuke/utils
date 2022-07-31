@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.android.material.shape.CornerFamily.CUT
+import com.google.android.material.shape.CornerFamily.ROUNDED
 import com.google.android.material.shape.ShapeAppearanceModel
 import com.google.android.material.slider.Slider
 import com.sharyuke.utils.EasyHolder
@@ -21,7 +22,6 @@ class ViewImageShapeableActivity : AppCompatActivity() {
         setContentView(R.layout.activity_view_image_shape)
         title = "ImageShapeableView"
         val list = listOf(
-            // 目前百分比圆角只发现能用xml设置，代码设置还没找到。
             ItemImageShape("圆角", R.layout.item_view_image_shapeable_1, R.id.item_view_image_shapeable_img_1, 1f, .5f) { s, h, f ->
                 s.shapeAppearanceModel = ShapeAppearanceModel().withCornerSize {
                     h.setText(R.id.item_view_image_shapeable_name, String.format("%s：%.2f", h.item?.name, f))
@@ -34,9 +34,16 @@ class ViewImageShapeableActivity : AppCompatActivity() {
                     it.width() * f
                 }
             },
-//            ItemImageShape("切角") { _, _, _ -> },
-//            ItemImageShape("切角") { _, _, _ -> },
-//            ItemImageShape("切角") { _, _, _ -> },
+            ItemImageShape("更复杂", R.layout.item_view_image_shapeable_3, R.id.item_view_image_shapeable_img_3, 1f, .5f) { s, h, f ->
+                s.shapeAppearanceModel = ShapeAppearanceModel.builder().setBottomLeftCorner(CUT, 0f)
+                    .setBottomRightCorner(ROUNDED, 0f)
+                    .setTopLeftCorner(ROUNDED, 0f)
+                    .setTopRightCorner(CUT, 0f)
+                    .build().withCornerSize {
+                        h.setText(R.id.item_view_image_shapeable_name, String.format("%s：%.2f", h.item?.name, f))
+                        it.width() * f
+                    }
+            },
         )
         findViewById<RecyclerView>(R.id.view_image_shapeable_rv).adapter = adapterCreate(R.layout.item_view_image_shapeable, list) {
             onHasItem {
