@@ -15,18 +15,18 @@ class ViewListBaseActivity : AppCompatActivity() {
         title = "简单列表"
         var times = 0
         val list = listOf(
-            ItemListBase("基础操作") { easeHolder, itemModel -> easeHolder.setText(R.id.item_simple_txt, String.format("%s 点击了%d次", itemModel.item.name, times++)) },
-            ItemListBase("基础操作") { easeHolder, itemModel -> easeHolder.setText(R.id.item_simple_txt, String.format("%s 点击了%d次", itemModel.item.name, itemModel.item.times++)) },
-            ItemListBase("基础操作") { easeHolder, itemModel -> easeHolder.setText(R.id.item_simple_txt, String.format("%s 点击了%d次", itemModel.item.name, times++)) },
-            ItemListBase("基础操作") { easeHolder, itemModel -> easeHolder.setText(R.id.item_simple_txt, String.format("%s 点击了%d次", itemModel.item.name, times++)) },
-            ItemListBase("基础操作") { easeHolder, itemModel -> easeHolder.setText(R.id.item_simple_txt, String.format("%s 点击了%d次", itemModel.item.name, times++)) },
-            ItemListBase("基础操作") { easeHolder, itemModel -> easeHolder.setText(R.id.item_simple_txt, String.format("%s 点击了%d次", itemModel.item.name, times++)) },
-            ItemListBase("基础操作") { easeHolder, itemModel -> easeHolder.setText(R.id.item_simple_txt, String.format("%s 点击了%d次", itemModel.item.name, times++)) },
-            ItemListBase("基础操作") { easeHolder, itemModel -> easeHolder.setText(R.id.item_simple_txt, String.format("%s 点击了%d次", itemModel.item.name, times++)) },
-            ItemListBase("基础操作") { easeHolder, itemModel -> easeHolder.setText(R.id.item_simple_txt, String.format("%s 点击了%d次", itemModel.item.name, times++)) },
-            ItemListBase("基础操作") { easeHolder, itemModel -> easeHolder.setText(R.id.item_simple_txt, String.format("%s 点击了%d次", itemModel.item.name, times++)) },
-            ItemListBase("基础操作") { easeHolder, itemModel -> easeHolder.setText(R.id.item_simple_txt, String.format("%s 点击了%d次", itemModel.item.name, times++)) },
-            ItemListBase("基础操作") { easeHolder, itemModel -> easeHolder.setText(R.id.item_simple_txt, String.format("%s 点击了%d次", itemModel.item.name, times++)) },
+            ItemListBase("基础操作") { easeHolder, itemModel -> easeHolder.setText(R.id.item_simple_txt, String.format("%s 点击了%d", itemModel.item.name, times++)) },
+            ItemListBase("独立操作") { easeHolder, itemModel -> easeHolder.setText(R.id.item_simple_txt, String.format("%s 点击了%d", itemModel.item.name, itemModel.item.times++)) },
+            ItemListBase("基础操作") { easeHolder, itemModel -> easeHolder.setText(R.id.item_simple_txt, String.format("%s 点击了%d", itemModel.item.name, times++)) },
+            ItemListBase("基础操作") { easeHolder, itemModel -> easeHolder.setText(R.id.item_simple_txt, String.format("%s 点击了%d", itemModel.item.name, times++)) },
+            ItemListBase("基础操作") { easeHolder, itemModel -> easeHolder.setText(R.id.item_simple_txt, String.format("%s 点击了%d", itemModel.item.name, times++)) },
+            ItemListBase("基础操作") { easeHolder, itemModel -> easeHolder.setText(R.id.item_simple_txt, String.format("%s 点击了%d", itemModel.item.name, times++)) },
+            ItemListBase("基础操作") { easeHolder, itemModel -> easeHolder.setText(R.id.item_simple_txt, String.format("%s 点击了%d", itemModel.item.name, times++)) },
+            ItemListBase("基础操作") { easeHolder, itemModel -> easeHolder.setText(R.id.item_simple_txt, String.format("%s 点击了%d", itemModel.item.name, times++)) },
+            ItemListBase("基础操作") { easeHolder, itemModel -> easeHolder.setText(R.id.item_simple_txt, String.format("%s 点击了%d", itemModel.item.name, times++)) },
+            ItemListBase("基础操作") { easeHolder, itemModel -> easeHolder.setText(R.id.item_simple_txt, String.format("%s 点击了%d", itemModel.item.name, times++)) },
+            ItemListBase("基础操作") { easeHolder, itemModel -> easeHolder.setText(R.id.item_simple_txt, String.format("%s 点击了%d", itemModel.item.name, times++)) },
+            ItemListBase("基础操作") { easeHolder, itemModel -> easeHolder.setText(R.id.item_simple_txt, String.format("%s 点击了%d", itemModel.item.name, times++)) },
         )
         findViewById<RecyclerView>(R.id.view_list_base_rv).adapter = adapterCreate(R.layout.item_simple_txt, list) {
             onHasItem {

@@ -16,6 +16,15 @@
         android:theme="@style/Theme.Utils"
         tools:targetApi="31">
         <activity
+            android:name=".ViewListLayoutManagerGridActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewListLayoutManagerFlexActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewListLayoutManagerActivity"
+            android:exported="false" />
+        <activity
             android:name=".ViewImageShapeableActivity"
             android:exported="false" />
         <activity
