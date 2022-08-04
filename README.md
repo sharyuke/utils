@@ -7,6 +7,9 @@
 - 视图
     - 列表
         - [简单列表](https://gitee.com/sharyuke/utils/blob/master/app/src/main/java/com/sharyuke/app/ViewListBaseActivity.kt)
+        - [流式布局](https://gitee.com/sharyuke/utils/blob/master/app/src/main/java/com/sharyuke/app/ViewListLayoutManagerFlexActivity.kt)
+        - [网格布局](https://gitee.com/sharyuke/utils/blob/master/app/src/main/java/com/sharyuke/app/ViewListLayoutManagerGridActivity.kt)
+        - [瀑布布局](https://gitee.com/sharyuke/utils/blob/master/app/src/main/java/com/sharyuke/app/ViewListLayoutManagerStaggeredActivity.kt)
     - 图片
         - [ImageFilterView](https://gitee.com/sharyuke/utils/blob/master/app/src/main/java/com/sharyuke/app/ViewImageFilterActivity.kt)
         - [ImageShapeableView](https://gitee.com/sharyuke/utils/blob/master/app/src/main/java/com/sharyuke/app/ViewImageShapeableActivity.kt)
