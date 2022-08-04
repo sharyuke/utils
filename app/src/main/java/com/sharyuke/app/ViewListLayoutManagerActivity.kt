@@ -14,6 +14,7 @@ class ViewListLayoutManagerActivity : AppCompatActivity() {
         val list = listOf(
             ItemSimple(R.mipmap.icon_list, "流式布局") { startActivity(Intent(this, ViewListLayoutManagerFlexActivity::class.java)) },
             ItemSimple(R.mipmap.icon_list, "网格布局") { startActivity(Intent(this, ViewListLayoutManagerGridActivity::class.java)) },
+            ItemSimple(R.mipmap.icon_list, "瀑布布局") { startActivity(Intent(this, ViewListLayoutManagerStaggeredActivity::class.java)) },
         )
         findViewById<RecyclerView>(R.id.view_list_layout_manager_rv).adapter = adapterCreate(R.layout.item_simple_txt, list) {
             onHasItem {

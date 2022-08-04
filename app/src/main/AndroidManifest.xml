@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Utils"
         tools:targetApi="31">
         <activity
+            android:name=".ViewListLayoutManagerStaggeredActivity"
+            android:exported="false" />
+        <activity
             android:name=".ViewListLayoutManagerGridActivity"
             android:exported="false" />
         <activity
