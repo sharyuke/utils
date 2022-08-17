@@ -5,10 +5,10 @@ import android.view.View
 import android.view.ViewStub
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.utils.widget.ImageFilterView
-import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.slider.Slider
 import com.sharyuke.utils.adapterCreate
 import com.sharyuke.utils.loadUrl
+import com.sharyuke.utils.withRecyclerView
 
 const val DEMO_IMAGE_URL = "https://pic.qqtn.com/up/2017-11/15102069107000700.jpg"
 
@@ -32,7 +32,7 @@ class ViewImageFilterActivity : AppCompatActivity() {
             ImageFilterModel("缩放", R.layout.item_image_5, R.id.item_image_5, 3f, 1f) { i, f -> i.imageZoom = f },
             ImageFilterModel("旋转", R.layout.item_image_6, R.id.item_image_6, 360f, 0f) { i, f -> i.imageRotate = f },
         )
-        findViewById<RecyclerView>(R.id.view_image_filter_rv).adapter = adapterCreate(R.layout.item_view_image_filter, list) {
+        adapterCreate(R.layout.item_view_image_filter, list) {
             onHasItem {
                 val imageView = getView<ViewStub>(R.id.item_view_sub).inflateAndFindView<ImageFilterView>(layout, id)
                 imageView.loadUrl(DEMO_IMAGE_URL)
@@ -44,7 +44,7 @@ class ViewImageFilterActivity : AppCompatActivity() {
                 slider.addOnChangeListener { _, value, _ -> value.apply { onChange(imageView, value) }.apply { setText(R.id.item_name, String.format("%s：%.2f", name, this)) } }
                 slider.visibility = if (adapterPosition == 0) View.GONE else View.VISIBLE
             }
-        }
+        }.withRecyclerView(findViewById(R.id.view_image_filter_rv))
     }
 }
 

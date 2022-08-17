@@ -21,9 +21,7 @@ class ViewListLayoutManagerFlexActivity : AppCompatActivity() {
         findViewById<RecyclerView>(R.id.view_list_layout_manager_flex_rv).apply {
             setFlexLayoutManagerNormal()
             val list = listOf("苹果", "梨", "香蕉", "菠萝", "草莓", "桔子", "橙", "木瓜", "西瓜", "哈密瓜", "香瓜", "甘蔗", "马蹄", "人参果", "柠檬", "火龙果", "提子", "葡萄", "芒果", "枇杷", "桃", "李", "樱桃", "番石榴", "榴莲", "石榴", "柿子", "杏子", "油桃", "菠萝蜜", "梅子", "无花果", "弥猴桃", "扬桃", "柚子", "红枣", "荔枝", "龙眼", "桑椹", "板粟", "山竹", "木竹", "山渣", "椰子", "海棠", "沙梨", "番鬼荔枝", "红毛丹", "沙梨")
-            adapter = adapterCreate(R.layout.item_single_txt, list) {
-                onHasItem { setText(R.id.item_single_txt, this) }
-            }
+            adapter = adapterCreate(R.layout.item_single_txt, list.plus(list).plus(list)) { onHasItem { setText(R.id.item_single_txt, this) } }
         }
     }
 }

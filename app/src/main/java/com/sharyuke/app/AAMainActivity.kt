@@ -3,8 +3,8 @@ package com.sharyuke.app
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.RecyclerView
 import com.sharyuke.utils.adapterCreate
+import com.sharyuke.utils.withRecyclerView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,13 +17,13 @@ class MainActivity : AppCompatActivity() {
             HomeItem(R.mipmap.home_device, "硬件") { startActivity(Intent(this, DeviceActivity::class.java)) },
             HomeItem(R.mipmap.home_other, "其他") { startActivity(Intent(this, OtherActivity::class.java)) },
         )
-        findViewById<RecyclerView>(R.id.home_recycler_view).adapter = adapterCreate(R.layout.item_home, list) {
+        adapterCreate(R.layout.item_home, list) {
             onHasItem {
                 setImageResource(R.id.item_home_img, icon)
                 setText(R.id.item_home_name, name)
             }
             onItemClick { item.onClick() }
-        }
+        }.withRecyclerView(findViewById(R.id.home_recycler_view))
     }
 }
 

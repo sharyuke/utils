@@ -3,8 +3,8 @@ package com.sharyuke.app
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.RecyclerView
 import com.sharyuke.utils.adapterCreate
+import com.sharyuke.utils.withRecyclerView
 
 class ViewListLayoutManagerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,12 +16,12 @@ class ViewListLayoutManagerActivity : AppCompatActivity() {
             ItemSimple(R.mipmap.icon_list, "网格布局") { startActivity(Intent(this, ViewListLayoutManagerGridActivity::class.java)) },
             ItemSimple(R.mipmap.icon_list, "瀑布布局") { startActivity(Intent(this, ViewListLayoutManagerStaggeredActivity::class.java)) },
         )
-        findViewById<RecyclerView>(R.id.view_list_layout_manager_rv).adapter = adapterCreate(R.layout.item_simple_txt, list) {
+        adapterCreate(R.layout.item_simple_txt, list) {
             onHasItem {
                 setImageResource(R.id.item_simple_icon, icon)
                 setText(R.id.item_simple_txt, name)
             }
             onItemClick { item.onClick() }
-        }
+        }.withRecyclerView(findViewById(R.id.view_list_layout_manager_rv))
     }
 }

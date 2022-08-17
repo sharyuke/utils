@@ -3,7 +3,6 @@ package com.sharyuke.app
 import android.os.Bundle
 import android.view.ViewStub
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.android.material.shape.CornerFamily.CUT
 import com.google.android.material.shape.CornerFamily.ROUNDED
@@ -12,6 +11,7 @@ import com.google.android.material.slider.Slider
 import com.sharyuke.utils.EasyHolder
 import com.sharyuke.utils.adapterCreate
 import com.sharyuke.utils.loadUrl
+import com.sharyuke.utils.withRecyclerView
 
 /**
  * 功能：实现对图片四个角的圆角 切角，可以单独控制，但是不能进行图片的滤镜功能。
@@ -47,7 +47,7 @@ class ViewImageShapeableActivity : AppCompatActivity() {
                     }
             },
         )
-        findViewById<RecyclerView>(R.id.view_image_shapeable_rv).adapter = adapterCreate(R.layout.item_view_image_shapeable, list) {
+        adapterCreate(R.layout.item_view_image_shapeable, list) {
             onHasItem {
                 val imageView = getView<ViewStub>(R.id.item_view_image_shapeable_img).inflateAndFindView<ShapeableImageView>(layout, id)
                 setText(R.id.item_view_image_shapeable_name, String.format("%s：%.2f", name, default))
@@ -58,7 +58,7 @@ class ViewImageShapeableActivity : AppCompatActivity() {
                 slider.value = default
                 slider.addOnChangeListener { _, value, _ -> item?.onChange?.let { it(imageView, this@adapterCreate, value) } }
             }
-        }
+        }.withRecyclerView(findViewById(R.id.view_image_shapeable_rv))
 
     }
 }

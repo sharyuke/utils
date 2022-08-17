@@ -2,8 +2,8 @@ package com.sharyuke.app
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.RecyclerView
 import com.sharyuke.utils.adapterCreate
+import com.sharyuke.utils.withRecyclerView
 
 const val DEMO_IMG_1 = "https://img.redocn.com/sheying/20150414/xiyangxiadedahaimeijing_4161285.jpg"
 const val DEMO_IMG_2 = "https://lmg.jj20.com/up/allimg/tp01/1ZZH250054149-0-lp.jpg"
@@ -27,8 +27,8 @@ class ViewListLayoutManagerStaggeredActivity : AppCompatActivity() {
             DEMO_IMG_4, DEMO_IMG_5, DEMO_IMG_1, DEMO_IMAGE_URL,
             DEMO_IMG_2, DEMO_IMG_3, DEMO_IMG_4, DEMO_IMG_5,
         )
-        findViewById<RecyclerView>(R.id.view_list_layout_manager_staggered_rv).adapter = adapterCreate(R.layout.item_staggered_img, list) {
+        adapterCreate(R.layout.item_staggered_img, list) {
             onHasItem { setImageUrl(R.id.item_staggered_img, this) }
-        }
+        }.withRecyclerView(findViewById(R.id.view_list_layout_manager_staggered_rv))
     }
 }
