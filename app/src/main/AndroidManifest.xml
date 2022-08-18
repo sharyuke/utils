@@ -16,49 +16,55 @@
         android:theme="@style/Theme.Utils"
         tools:targetApi="31">
         <activity
-            android:name=".ViewListLayoutManagerStaggeredActivity"
+            android:name=".ui.ToolsRegexActivity"
             android:exported="false" />
         <activity
-            android:name=".ViewListLayoutManagerGridActivity"
+            android:name=".ui.ToolsActivity"
             android:exported="false" />
         <activity
-            android:name=".ViewListLayoutManagerFlexActivity"
+            android:name=".ui.ViewListLayoutManagerStaggeredActivity"
             android:exported="false" />
         <activity
-            android:name=".ViewListLayoutManagerActivity"
+            android:name=".ui.ViewListLayoutManagerGridActivity"
             android:exported="false" />
         <activity
-            android:name=".ViewImageShapeableActivity"
+            android:name=".ui.ViewListLayoutManagerFlexActivity"
             android:exported="false" />
         <activity
-            android:name=".ViewListBaseActivity"
+            android:name=".ui.ViewListLayoutManagerActivity"
             android:exported="false" />
         <activity
-            android:name=".OtherActivity"
+            android:name=".ui.ViewImageShapeableActivity"
             android:exported="false" />
         <activity
-            android:name=".DeviceActivity"
+            android:name=".ui.ViewListBaseActivity"
             android:exported="false" />
         <activity
-            android:name=".NetworkActivity"
+            android:name=".ui.OtherActivity"
             android:exported="false" />
         <activity
-            android:name=".FileActivity"
+            android:name=".ui.DeviceActivity"
             android:exported="false" />
         <activity
-            android:name=".ViewImageActivity"
+            android:name=".ui.NetworkActivity"
             android:exported="false" />
         <activity
-            android:name=".ViewImageFilterActivity"
+            android:name=".ui.FileActivity"
             android:exported="false" />
         <activity
-            android:name=".ViewListActivity"
+            android:name=".ui.ViewImageActivity"
             android:exported="false" />
         <activity
-            android:name=".ViewActivity"
+            android:name=".ui.ViewImageFilterActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.ViewListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

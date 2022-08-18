@@ -1,8 +1,10 @@
-package com.sharyuke.app
+package com.sharyuke.app.ui
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.sharyuke.app.ItemSimple
+import com.sharyuke.app.R
 import com.sharyuke.utils.adapterCreate
 import com.sharyuke.utils.withRecyclerView
 
@@ -12,8 +14,8 @@ class ViewActivity : AppCompatActivity() {
         setContentView(R.layout.activity_view)
         title = "视图"
         val list = listOf(
-            ViewItem(R.mipmap.icon_list, "列表") { startActivity(Intent(this, ViewListActivity::class.java)) },
-            ViewItem(R.mipmap.icon_pic, "图片") { startActivity(Intent(this, ViewImageActivity::class.java)) },
+            ItemSimple(R.mipmap.icon_list, "列表") { startActivity(Intent(this, ViewListActivity::class.java)) },
+            ItemSimple(R.mipmap.icon_pic, "图片") { startActivity(Intent(this, ViewImageActivity::class.java)) },
         )
         adapterCreate(R.layout.item_home, list) {
             onHasItem {
@@ -24,5 +26,3 @@ class ViewActivity : AppCompatActivity() {
         }.withRecyclerView(findViewById(R.id.view_recycler_view))
     }
 }
-
-data class ViewItem(val icon: Int, val name: String, val onClick: () -> Unit)

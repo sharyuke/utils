@@ -1,4 +1,4 @@
-package com.sharyuke.app
+package com.sharyuke.app.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,7 @@ import com.google.android.flexbox.FlexDirection
 import com.google.android.flexbox.FlexWrap
 import com.google.android.flexbox.FlexboxLayoutManager
 import com.google.android.flexbox.JustifyContent
+import com.sharyuke.app.R
 import com.sharyuke.utils.adapterCreate
 
 /**

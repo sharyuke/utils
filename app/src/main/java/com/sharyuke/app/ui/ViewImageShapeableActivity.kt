@@ -1,4 +1,4 @@
-package com.sharyuke.app
+package com.sharyuke.app.ui
 
 import android.os.Bundle
 import android.view.ViewStub
@@ -8,6 +8,7 @@ import com.google.android.material.shape.CornerFamily.CUT
 import com.google.android.material.shape.CornerFamily.ROUNDED
 import com.google.android.material.shape.ShapeAppearanceModel
 import com.google.android.material.slider.Slider
+import com.sharyuke.app.R
 import com.sharyuke.utils.EasyHolder
 import com.sharyuke.utils.adapterCreate
 import com.sharyuke.utils.loadUrl

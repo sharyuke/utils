@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ViewListLayoutManagerFlexActivity">
+    tools:context=".ui.ViewListLayoutManagerFlexActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/view_list_layout_manager_flex_rv"

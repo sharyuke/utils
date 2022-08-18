@@ -1,4 +1,4 @@
-package com.sharyuke.app
+package com.sharyuke.app.ui
 
 import android.os.Bundle
 import android.view.View
@@ -6,6 +6,7 @@ import android.view.ViewStub
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.utils.widget.ImageFilterView
 import com.google.android.material.slider.Slider
+import com.sharyuke.app.R
 import com.sharyuke.utils.adapterCreate
 import com.sharyuke.utils.loadUrl
 import com.sharyuke.utils.withRecyclerView

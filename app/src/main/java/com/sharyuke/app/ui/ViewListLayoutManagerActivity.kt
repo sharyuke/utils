@@ -1,8 +1,10 @@
-package com.sharyuke.app
+package com.sharyuke.app.ui
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.sharyuke.app.ItemSimple
+import com.sharyuke.app.R
 import com.sharyuke.utils.adapterCreate
 import com.sharyuke.utils.withRecyclerView
 
@@ -19,7 +21,7 @@ class ViewListLayoutManagerActivity : AppCompatActivity() {
         adapterCreate(R.layout.item_simple_txt, list) {
             onHasItem {
                 setImageResource(R.id.item_simple_icon, icon)
-                setText(R.id.item_simple_txt, name)
+                setText(R.id.item_simple_name, name)
             }
             onItemClick { item.onClick() }
         }.withRecyclerView(findViewById(R.id.view_list_layout_manager_rv))
