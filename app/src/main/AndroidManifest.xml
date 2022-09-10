@@ -5,6 +5,9 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!--    读取外部存储器权限      -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -15,6 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Utils"
         tools:targetApi="31">
+        <activity
+            android:name=".ui.PermissionActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.ViewListPagingActivity"
             android:exported="false" />

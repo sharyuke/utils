@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
             HomeItem(R.mipmap.home_net, "网络") { startActivity(Intent(this, NetworkActivity::class.java)) },
             HomeItem(R.mipmap.home_device, "硬件") { startActivity(Intent(this, DeviceActivity::class.java)) },
             HomeItem(R.mipmap.home_other, "其他") { startActivity(Intent(this, OtherActivity::class.java)) },
+            HomeItem(R.mipmap.home_permission, "权限") { startActivity(Intent(this, PermissionActivity::class.java)) },
             HomeItem(R.mipmap.home_tool, "工具") { startActivity(Intent(this, ToolsActivity::class.java)) },
         )
         adapterCreate(R.layout.item_home, list) {
