@@ -19,6 +19,9 @@
             android:name=".ui.ViewListPagingActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.FileRoomActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.ToolsRegexActivity"
             android:exported="false" />
         <activity

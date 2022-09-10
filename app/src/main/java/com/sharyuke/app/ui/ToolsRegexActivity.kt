@@ -6,6 +6,7 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
+import androidx.core.widget.doAfterTextChanged
 import com.sharyuke.app.R
 
 class ToolsRegexActivity : AppCompatActivity() {
@@ -17,7 +18,7 @@ class ToolsRegexActivity : AppCompatActivity() {
         val inputView = findViewById<EditText>(R.id.tool_regex_input)
         val resultView = findViewById<TextView>(R.id.tool_regex_matches)
 
-        inputView.addTextChangedListener {
+        inputView.doAfterTextChanged {
             val patten = pattenView.text.toString()
             val input = it.toString()
             if (!TextUtils.isEmpty(patten) && !TextUtils.isEmpty(input)) {

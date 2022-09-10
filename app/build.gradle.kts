@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -36,4 +37,12 @@ dependencies {
     implementation(project(":utils"))
 
     implementation(flexLayoutManager)
+
+    implementation(roomRuntime)
+    implementation(roomKtx)
+    kapt(aptRoomCompile)
+
+    implementation(coroutineAndroid)
+    implementation(coroutineCore)
+    implementation(lifeCycleScope)
 }
