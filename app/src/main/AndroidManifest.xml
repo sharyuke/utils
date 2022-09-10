@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Utils"
         tools:targetApi="31">
         <activity
+            android:name=".ui.ViewListPagingActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.ToolsRegexActivity"
             android:exported="false" />
         <activity

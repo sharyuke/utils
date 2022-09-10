@@ -18,7 +18,7 @@ class ViewListActivity : AppCompatActivity() {
             ItemSimple(R.mipmap.icon_list_page, "布局管理") { startActivity(Intent(this, ViewListLayoutManagerActivity::class.java)) },
             ItemSimple(R.mipmap.icon_list, "简单列表") { startActivity(Intent(this, ViewListBaseActivity::class.java)) },
             ItemSimple(R.mipmap.icon_list_group, "分组列表") { Toast.makeText(this, "还没做", Toast.LENGTH_LONG).show() },
-            ItemSimple(R.mipmap.icon_list_page, "分页列表") { Toast.makeText(this, "还没做", Toast.LENGTH_LONG).show() },
+            ItemSimple(R.mipmap.icon_list_page, "分页列表") { startActivity(Intent(this, ViewListPagingActivity::class.java)) },
         )
         adapterCreate(R.layout.item_simple_txt, list) {
             onHasItem {

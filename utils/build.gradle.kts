@@ -41,4 +41,6 @@ dependencies {
 //    implementation(recyclerView)
     api(quickAdapter)
     api(glide) // 图片框架
+    api(uiPager3) // 分页
+    api(uiSwipe) // 下拉刷新
 }
